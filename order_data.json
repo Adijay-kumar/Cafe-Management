@@ -1,0 +1,91 @@
+[
+    {
+        "Name": "Adi",
+        "Contact Number": 1818181818,
+        "Order Type": "Dine-in",
+        "Order Number": 12,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2
+        },
+        "Total Bill": 118,
+        "Amount Received": 28,
+        "Change Given": 2
+    },
+    {
+        "Name": "Adi",
+        "Contact Number": 1232123423,
+        "Order Type": "Dine-in",
+        "Order Number": 122,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2
+        },
+        "Total Bill": 118,
+        "Amount Received": 122,
+        "Change Given": 2
+    },
+    {
+        "Name": "Adi",
+        "Contact Number": 1234567891,
+        "Order Type": "Dine-in",
+        "Order Number": 122,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2
+        },
+        "Total Bill": 118,
+        "Amount Received": 122,
+        "Change Given": 2,
+        "Date": "24-10-2025",
+        "Time": "06:52 PM"
+    },
+    {
+        "Name": "Adi",
+        "Contact": 1234567891,
+        "Order Type": "Dine-in",
+        "Order Number": 122,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2
+        },
+        "total": 118,
+        "amount_received": 122,
+        "change_given": 0,
+        "Date": "24-10-2025",
+        "Time": "06:55 PM"
+    },
+    {
+        "Name": "Adi",
+        "contact": 1234567891,
+        "Order Type": "Dine-in",
+        "OrderID": 12,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2,
+            "MacAlooTiki Burger": 2,
+            "Cappuccino": 4
+        },
+        "total": 612,
+        "amount_received": 122,
+        "change_given": 2,
+        "Date": "25-10-2025",
+        "Time": "06:29 PM"
+    },
+    {
+        "Name": "Adi",
+        "contact": 1234567891,
+        "Order Type": "Dine-in",
+        "OrderID": 1,
+        "Payment Mode": "UPI",
+        "Order": {
+            "Latte": 2,
+            "MacAlooTiki Burger": 1
+        },
+        "total": 167,
+        "amount_received": 0,
+        "change_given": 0,
+        "Date": "27-10-2025",
+        "Time": "12:55 AM"
+    }
+]

@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Oak Cafe — Receipt</title>
+  <style>
+    :root{
+      --paper-width:320px;
+      --muted:#6b6b6b;
+      --black:#111;
+      --accent:#222;
+      --border:1px dashed #ccc;
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+    }
+    body{
+      background: #f2f2f4;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      min-height:100vh;
+      padding:24px;
+    }
+    .receipt{
+      width:var(--paper-width);
+      background:#fff;
+      padding:18px 18px 22px;
+      box-shadow:0 6px 20px rgba(0,0,0,0.06);
+      border-radius:8px;
+      color:var(--black);
+      line-height:1.18;
+    }
+    .brand{
+      text-align:center;
+      margin-bottom:6px;
+    }
+    .brand h1{
+      margin:0;
+      font-size:20px;
+      letter-spacing:2px;
+      font-weight:700;
+    }
+    .brand small{
+      display:block;
+      margin-top:6px;
+      color:var(--muted);
+      font-size:12px;
+    }
+    .meta{
+      display:flex;
+      justify-content:space-between;
+      font-size:12px;
+      color:var(--muted);
+      margin:8px 0 12px;
+    }
+    .divider{ border-top:var(--border); margin:8px 0;}
+    table.items{
+      width:100%;
+      border-collapse:collapse;
+      font-size:13px;
+    }
+    table.items thead th{
+      text-align:left;
+      font-size:12px;
+      color:var(--muted);
+      padding-bottom:6px;
+      border-bottom:1px solid #eee;
+    }
+    table.items tbody td{
+      padding:8px 0;
+      vertical-align:top;
+    }
+    .qty{ width:36px; text-align:center;}
+    .price{ width:64px; text-align:right;}
+    .total{ width:64px; text-align:right; font-weight:600;}
+    .right{ text-align:right }
+    .summary{
+      margin-top:10px;
+      font-size:13px;
+    }
+    .summary .row{
+      display:flex;
+      justify-content:space-between;
+      padding:6px 0;
+      border-bottom:1px dashed #eee;
+    }
+    .summary .row.total{
+      font-size:16px;
+      font-weight:700;
+      border-top:1px solid #eee;
+    }
+    .payment{
+      margin-top:10px;
+      font-size:13px;
+    }
+    .payment .label{ color:var(--muted); font-size:12px }
+    .customer{
+      margin-top:12px;
+      font-size:13px;
+    }
+    .thankyou{
+      text-align:center;
+      margin-top:14px;
+      font-weight:600;
+      letter-spacing:0.6px;
+    }
+    .tiny{ font-size:11px; color:var(--muted) }
+    @media print{
+      body{background:white}
+      .receipt{box-shadow:none;border-radius:0}
+    }
+  </style>
+</head>
+<body>
+  <article class="receipt">
+    <header class="brand">
+      <h1>OAK CAFE</h1>
+      <small>Address</small>
+    </header>
+
+    <div class="meta">
+      <div>
+        <div class="tiny">Order id : <strong>#{{OrderID}}</strong></div>
+        <div class="tiny">Date : <strong>{{Date}}</strong></div>
+      </div>
+      <div class="right">
+        <div class="tiny">Time : <strong>{{Time}}</strong></div>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <table class="items" aria-label="items">
+      <thead>
+        <tr>
+          <th>Item</th>
+          <th class="qty">Qty</th>
+          <th class="price">Price</th>
+          <th class="total">Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{Item1}}</td>
+          <td class="qty">{{Qty1}}</td>
+          <td class="price">₹{{Price1}}</td>
+          <td class="total">₹{{Total1}}</td>
+        </tr>
+        <tr>
+          <td>{{Item2}}</td>
+          <td class="qty">{{Qty2}}</td>
+          <td class="price">₹{{Price2}}</td>
+          <td class="total">₹{{Total2}}</td>
+        </tr>
+        <tr>
+          <td>{{Item3}}</td>
+          <td class="qty">{{Qty3}}</td>
+          <td class="price">₹{{Price3}}</td>
+          <td class="total">₹{{Total3}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="summary">
+      <div class="row"><span class="tiny">Subtotal</span><span>₹{{Subtotal}}</span></div>
+      <div class="row"><span class="tiny">Tax (5%)</span><span>₹{{Tax}}</span></div>
+      <div class="row total"><span>Total</span><span>₹{{GrandTotal}}</span></div>
+    </div>
+
+    <div class="payment">
+      <div class="label">Payment Details :</div>
+      <div>Payment Mode : <strong>{{PaymentMode}}</strong></div>
+      <div>Amount Received : <strong>₹{{AmountReceived}}</strong></div>
+      <div>Change given : <strong>₹{{ChangeGiven}}</strong></div>
+    </div>
+
+    <div class="customer">
+      <div class="label">Customer Detail</div>
+      <div>Name : <strong>{{Name}}</strong></div>
+      <div>Contact : <strong>{{Contact}}</strong></div>
+    </div>
+
+    <p class="thankyou">Thankyou</p>
+    <p class="tiny" style="text-align:center;margin-top:6px">Scan for feedback / visit again</p>
+  </article>
+</body>
+</html>
